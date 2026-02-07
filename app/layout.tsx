@@ -1,12 +1,21 @@
-import Navbar from '@/components/Navbar';
 import './globals.css';
+import Navbar from '@/components/Navbar'; // تأكد من المسار الصحيح للنافبار
 
-export default function RootLayout({ children }) {
+export const metadata = {
+  title: 'CineLuxe Chat',
+  description: 'Real-time developer community',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="ar" dir="rtl">
-      <body>
+    <html lang="en">
+      <body className="bg-[#050505]">
         <Navbar />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
